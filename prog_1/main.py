@@ -4,6 +4,10 @@ for line in numbers:
 
 #even
     if num % 2 == 0:
-        print (num)
+        print(num)
+
+#odd
+    if num % 2 == 1:
+        print(num)
 
 numbers.close()
