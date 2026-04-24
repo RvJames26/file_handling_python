@@ -1,5 +1,6 @@
 numbers = open("prog_1/numbers.txt", "r")
 even_num = open("prog_1/even.txt", "w")
+odd_num = open("prog_1/odd.txt", "w")
 for line in numbers:
     num = int(line)
 
@@ -11,6 +12,9 @@ for line in numbers:
 #odd
     if num % 2 == 1:
         print(num)
+        odd_num.write(line)
+
 
 numbers.close()
 even_num.close()
+odd_num.close()
