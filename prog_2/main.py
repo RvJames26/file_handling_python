@@ -10,11 +10,6 @@ for line in students:
         highet_gwa = float_data
         top_student = data[0]
 
-print(top_student)
-
-
-
-
-
+print(f"The student who have the highest GWA is {top_student}, that have {highet_gwa}")
 
 students.close()
