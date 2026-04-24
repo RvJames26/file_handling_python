@@ -27,3 +27,6 @@ class numbers_sort:
         even_num.close()
         odd_num.close()
         print("Finish")
+
+sorter = numbers_sort("prog_1/even.txt", "prog_1/odd.txt", "prog_1/numbers.txt")
+sorter.process_file()
