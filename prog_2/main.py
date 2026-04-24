@@ -1,23 +1,24 @@
 class students_gwa:
 
-    def __init__(self, students, highest_gwa, top_student):
-        self.students = students
-        self.highest_gwa = highest_gwa
-        self.top_student = top_student
+    def __init__(self, file_path):
+        self.file_path = file_path
+        self.highet_gwa = 5.00
+        self.top_student = ""
 
     def process_students(self):
         students = open("prog_2/students_gwa.txt", "r")
-        highet_gwa = 5.00
-        top_student = ""
 
         for line in students:
             data = line.split(",")
             float_data = float(data[1])
             
-            if float_data < highet_gwa:
+            if float_data <self.highet_gwa:
                 highet_gwa = float_data
                 top_student = data[0]
 
         print(f"The student who have the highest GWA is {top_student}, that have {highet_gwa}")
 
         students.close()
+
+files = students_gwa("prog_2/students_gwa.txt")
+files.process_students()
