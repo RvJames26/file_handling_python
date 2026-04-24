@@ -1,8 +1,11 @@
 class students_gwa:
 
     def __init__(self, students, highest_gwa, top_student):
+        self.students = students
+        self.highest_gwa = highest_gwa
+        self.top_student = top_student
 
-        
+    def process_students(self):
         students = open("prog_2/students_gwa.txt", "r")
         highet_gwa = 5.00
         top_student = ""
