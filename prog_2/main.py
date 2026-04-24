@@ -12,7 +12,7 @@ class students_gwa:
             data = line.split(",")
             float_data = float(data[1])
             
-            if float_data <self.highet_gwa:
+            if float_data < self.highet_gwa:
                 self.highet_gwa = float_data
                 self.top_student = data[0]
 
