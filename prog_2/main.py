@@ -13,10 +13,10 @@ class students_gwa:
             float_data = float(data[1])
             
             if float_data <self.highet_gwa:
-                highet_gwa = float_data
-                top_student = data[0]
+                self.highet_gwa = float_data
+                self.top_student = data[0]
 
-        print(f"The student who have the highest GWA is {top_student}, that have {highet_gwa}")
+        print(f"The student who have the highest GWA is {self.top_student}, that have {self.highet_gwa}")
 
         students.close()
 
