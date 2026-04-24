@@ -26,4 +26,4 @@ class numbers_sort:
         numbers.close()
         even_num.close()
         odd_num.close()
-        print("F")
+        print("Finish")
