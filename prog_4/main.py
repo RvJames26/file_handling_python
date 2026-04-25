@@ -1,5 +1,11 @@
 class Numbers:
 
+    def __init__(self, numbers, square_even, cube_odd):
+        self.numbers = numbers
+        self.square_even = square_even
+        self.cube_odd = cube_odd
+
+    
     numbers = open("prog_4/integers.txt", "r")
     square_even = open("prog_4/double.txt", "w")
     cube_odd = open("prog_4/triple.txt", "w")
