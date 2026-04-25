@@ -1,4 +1,4 @@
-class life_file:
+class LifeFile:
 
     def __init__(self, file_path):
         self.file_path = file_path
@@ -15,16 +15,19 @@ class life_file:
                 continue
             if yes_no == "n":
                 break
-                read_file = open("prog_3/my_life.txt", "r")
-                for line in read_file:
-                    print(line)
-                    read_file.close()
 
-            
             else:
                 print("Invalid input, use only y and n")
 
-            
 
+    def reading(self):
+        print("File content: ")
+        read_file = open("prog_3/my_life.txt", "r")
+        for line in read_file:
+            print(line, end="")
 
-        my_life.close()
+        read_file.close()
+
+file = LifeFile("prog_3/my_life.txt")
+file.writing_life()
+file.reading()
