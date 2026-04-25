@@ -1,4 +1,4 @@
-class LifeFile:
+class FileWriter:
 
     def __init__(self, file_path):
         self.file_path = file_path
@@ -19,6 +19,9 @@ class LifeFile:
             else:
                 print("Invalid input, use only y and n")
 
+class FileReader:
+    def __init__(self, file_path):
+        self.file_path = file_path
 
     def reading(self):
         print("File content: ")
@@ -28,6 +31,8 @@ class LifeFile:
 
         read_file.close()
 
-file = LifeFile("prog_3/my_life.txt")
-file.writing_life()
-file.reading()
+writer = FileWriter("prog_3/my_life.txt")
+writer.writing_life()
+
+reader = FileReader("prog_3/my_life.txt")
+reader.reading()
