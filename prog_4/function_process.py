@@ -1,0 +1,31 @@
+class Numbers:
+
+    def __init__(self, numbers, square_even, cube_odd):
+        self.numbers = numbers
+        self.square_even = square_even
+        self.cube_odd = cube_odd
+
+    def process_file(self):
+        numbers = open("prog_4/integers.txt", "r")
+        square_even = open("prog_4/double.txt", "w")
+        cube_odd = open("prog_4/triple.txt", "w")
+
+        for line in numbers:
+            num = int(line)
+
+        #even_square
+            if num % 2 == 0:
+                square = num ** 2
+                print(square)
+                square_even.write(str(square) + "\n")
+
+        #odd_cube
+            if num % 2 == 1:
+                cube = num ** 3
+                print(cube)
+                cube_odd.write(str(cube) + "\n")
+
+
+        numbers.close()
+        square_even.close()
+        cube_odd.close()
