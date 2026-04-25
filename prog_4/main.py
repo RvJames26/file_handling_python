@@ -5,27 +5,27 @@ class Numbers:
         self.square_even = square_even
         self.cube_odd = cube_odd
 
-    
-    numbers = open("prog_4/integers.txt", "r")
-    square_even = open("prog_4/double.txt", "w")
-    cube_odd = open("prog_4/triple.txt", "w")
+    def process_file(self):
+        numbers = open("prog_4/integers.txt", "r")
+        square_even = open("prog_4/double.txt", "w")
+        cube_odd = open("prog_4/triple.txt", "w")
 
-    for line in numbers:
-        num = int(line)
+        for line in numbers:
+            num = int(line)
 
-    #even_square
-        if num % 2 == 0:
-            square = num ** 2
-            print(square)
-            square_even.write(str(square) + "\n")
+        #even_square
+            if num % 2 == 0:
+                square = num ** 2
+                print(square)
+                square_even.write(str(square) + "\n")
 
-    #odd_cube
-        if num % 2 == 1:
-            cube = num ** 3
-            print(cube)
-            cube_odd.write(str(cube) + "\n")
+        #odd_cube
+            if num % 2 == 1:
+                cube = num ** 3
+                print(cube)
+                cube_odd.write(str(cube) + "\n")
 
 
-    numbers.close()
-    square_even.close()
-    cube_odd.close()
+        numbers.close()
+        square_even.close()
+        cube_odd.close()
